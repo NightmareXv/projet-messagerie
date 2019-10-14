@@ -1,0 +1,16 @@
+* le 1er reflexe que j'ai est de dessiner une base de données qui m'a l'air logic.
+
+* dans notre cas, en ce moment et vue que je viens de commencer le projet je 
+constate qu'on aura besoin de 4 tables principale
+
+
+--les tables de notre base (version alpha)
+* une table client qui regroupera les cordonnées client,
+* une table type qui concernera les types de clients et qui gerera les authorisations
+* une table message avec un champ auto-remplissage date, cela nous servira pour
+savoir l'heure et le jour de l'envoi du message
+* Archive cette table nous archivera les messages, une petite fonction s'occupera
+d'afficher les messages dans la file
+
+
+--
