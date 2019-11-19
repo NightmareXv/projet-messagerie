@@ -1,0 +1,58 @@
+document.addEventListener("DOMContentLoaded", function(e){
+    
+    var _id = 6;
+
+    function msg_sent(message, img, time){
+        return  `
+        <div class="row msg_container base_sent">
+            <div class="col-md-10 col-xs-10">
+                <div class="messages msg_sent">
+                    <p>${message}</p>
+                    <time datetime="${time}">${time}</time>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-2 avatar">
+                <img src="${img}" class=" img-responsive ">
+            </div>
+        </div> `;
+    }
+
+    function msg_rec(message, img, time){
+        return  `
+                <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="${img}" class=" img-responsive ">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                <p>${message}</p>
+                                <time datetime="${time}">${time}</time>
+                            </div>
+                        </div>
+                    </div>`;
+    }
+
+    recuperation()
+    function recuperation(){
+        fetch('http://localhost:59320/projet/recup-envoi.php')
+        .then(res => res.json())
+/*        fetch('http://localhost:59320/projet/recup-envoi.php')
+        .then( res => res.json())
+        .then(data => console.log('js'))
+  */
+    }
+    //var list = document.getElementById('list-messages');
+    /*
+    {
+        datas.map(data => {
+            if(data['id_client'] == _id ){
+                var e = document.createElement('div')
+                e.innerHTML = msg_sent(data['message'], '', data['date'])
+                list.appendChild(e)
+            }
+
+        })
+    }
+    */
+//    setInterval(recuperation, 1000);
+});

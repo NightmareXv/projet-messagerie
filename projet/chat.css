@@ -1,0 +1,15 @@
+#container {
+    width: 500px;
+    margin: 50px auto;
+  }
+#chatOutput {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #333;
+  }
+#username {
+    width: 100px;
+  }
+#chatText {
+    width: 285px;
+  }
